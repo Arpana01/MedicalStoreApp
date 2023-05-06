@@ -17,9 +17,9 @@ public class MedicineModel {
     private String batchNo;
     private LocalDate mfgDate;
     private LocalDate expirydate;
-    private long mrp;
+    private Double mrp;
 
-    public MedicineModel(int id, String productName, String batchNo, LocalDate mfgDate, LocalDate expirydate, long mrp) {
+    public MedicineModel(int id, String productName, String batchNo, LocalDate mfgDate, LocalDate expirydate, Double mrp) {
         this.id = id;
         this.productName = productName;
         this.batchNo = batchNo;
@@ -68,11 +68,11 @@ public class MedicineModel {
         this.expirydate = expirydate;
     }
 
-    public long getMrp() {
+    public Double getMrp() {
         return mrp;
     }
 
-    public void setMrp(long mrp) {
+    public void setMrp(Double mrp) {
         this.mrp = mrp;
     }
 }
