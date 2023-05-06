@@ -10,27 +10,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class MedicineController {
-
     @Autowired
     private MedicineRepository mr;
-
     @GetMapping("medicine")
     public String medicineExipryDate(){
         return "mrp";
     }
-
-
     @PostMapping("/addMedicine")
     public MedicineModel addMedicine(@RequestBody MedicineModel mc){
         return this.mr.save(mc);
     }
-
-
-
-
-
-
 }
-
-
-
