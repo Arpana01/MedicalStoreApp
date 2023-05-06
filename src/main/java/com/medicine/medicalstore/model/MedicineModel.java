@@ -4,7 +4,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 public class MedicineModel {
@@ -13,11 +15,11 @@ public class MedicineModel {
     private int id;
     private String productName;
     private String batchNo;
-    private LocalDateTime mfgDate;
-    private LocalDateTime expirydate;
+    private LocalDate mfgDate;
+    private LocalDate expirydate;
     private long mrp;
 
-    public MedicineModel(int id, String productName, String batchNo, LocalDateTime mfgDate, LocalDateTime expirydate, long mrp) {
+    public MedicineModel(int id, String productName, String batchNo, LocalDate mfgDate, LocalDate expirydate, long mrp) {
         this.id = id;
         this.productName = productName;
         this.batchNo = batchNo;
@@ -50,19 +52,19 @@ public class MedicineModel {
         this.batchNo = batchNo;
     }
 
-    public LocalDateTime getMfgDate() {
+    public LocalDate getMfgDate() {
         return mfgDate;
     }
 
-    public void setMfgDate(LocalDateTime mfgDate) {
+    public void setMfgDate(LocalDate mfgDate) {
         this.mfgDate = mfgDate;
     }
 
-    public LocalDateTime getExpirydate() {
+    public LocalDate getExpirydate() {
         return expirydate;
     }
 
-    public void setExpirydate(LocalDateTime expirydate) {
+    public void setExpirydate(LocalDate expirydate) {
         this.expirydate = expirydate;
     }
 
